@@ -267,6 +267,18 @@ a.btn{
 	border: 0px !important;
 }
 
+.bpink{
+	background: #ff7070 !important;
+	color: #fff !important;	
+	border: 0px !important;
+}
+
+.byellow{
+	background: #ffcc00 !important;
+	color: #fff !important;	
+	border: 0px !important;
+}
+
 .blightblue h2,.blightblue h3, .blightblue h3, .blightblue h4, .blightblue h5, .blightblue h6,
 .bblue h2,.bblue h3, .bblue h3, .bblue h4, .bblue h5, .bblue h6,
 .bgreen h2,.bgreen h3, .bgreen h3, .bgreen h4, .bgreen h5, .bgreen h6,
