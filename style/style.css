@@ -23,7 +23,7 @@ input, textarea{
 	font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
 }
 
-select{
+select {
 	font-size: 13px !important;
 }
 
@@ -43,7 +43,7 @@ input[type="radio"], input[type="checkbox"] {
 	font-size: 11px !important;
 }
 
-body{
+body {
 	font-size: 13px;
 	line-height: 23px;
 	color: #666;
@@ -52,25 +52,25 @@ body{
 	-webkit-font-smoothing: antialiased;
 }
 
-body .container{
+body .container {
 	width: 97%;
 	padding-left: 1.5%;
 	padding-right: 1.5%;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6 {
 	padding: 2px 0px;
 	margin: 2px 0px;
 	color: #777;
 	font-weight: 400;
 }
 
-h2{
+h2 {
 	font-size: 30px;
 	line-height: 40px;
 }
 
-h3{
+h3 {
 	font-size: 23px;
 	line-height: 33px;
 }
