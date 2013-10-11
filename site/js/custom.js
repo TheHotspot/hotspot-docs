@@ -11,7 +11,7 @@ $(document).ready(function(){
       $(".sidebar .sidebar-inner").slideDown(350);
     }
     else{
-      $(".sidebar .sidebar-inner").slideUp(350); 
+      $(".sidebar .sidebar-inner").slideUp(350);
     }
   });
 
@@ -19,24 +19,52 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  $(".has_submenu > a").click(function(e){
+  $(".has_submenu > a").hover(function(e){
+    e.preventDefault();
+    var menu_li = $(this).parent("li");
+    var menu_ul = $(this).next("ul");
+
+      menu_ul.slideDown(350);
+      menu_li.addClass("open");
+  }, function(e) {
     e.preventDefault();
     var menu_li = $(this).parent("li");
     var menu_ul = $(this).next("ul");
 
     if(menu_li.hasClass("open")){
       menu_ul.slideUp(350);
-      menu_li.removeClass("open")
-    }
-    else{
-      $(".navi > li > ul").slideUp(350);
-      $(".navi > li").removeClass("open");
-      menu_ul.slideDown(350);
-      menu_li.addClass("open");
+      menu_li.removeClass("open");
     }
   });
 
 });
+
+$(document).ready(function(){
+
+  $(".submenu").hover(function(e){
+    e.preventDefault();
+    var menu_li = $(this).parent("li").parent("li");
+    var menu_ul = $(this).parent("li").next("ul");
+
+    if(menu_li.hasClass("open")){
+    }
+    else{
+      menu_ul.slideDown(350);
+      menu_li.addClass("open");
+    }
+  }, function(e) {
+    e.preventDefault();
+    var menu_li = $(this).parent("li").parent("li");
+    var menu_ul = $(this).parent("li").next("ul");
+
+    if(menu_li.hasClass("open")){
+      menu_ul.slideUp(350);
+      menu_li.removeClass("open");
+    }
+  });
+
+});
+
 
 $(document).ready(function(){
   $(".sidebar-dropdown a").on('click',function(e){
@@ -46,12 +74,12 @@ $(document).ready(function(){
         // hide any open menus and remove all other classes
         $(".sidebar .sidebar-inner").slideUp(350);
         $(".sidebar-dropdown a").removeClass("dropy");
-        
+
         // open our new menu and add the dropy class
         $(".sidebar .sidebar-inner").slideDown(350);
         $(this).addClass("dropy");
       }
-      
+
       else if($(this).hasClass("dropy")) {
         $(this).removeClass("dropy");
         $(".sidebar .sidebar-inner").slideUp(350);
@@ -73,28 +101,28 @@ $('.wclose').click(function(e){
   $('.wminimize').click(function(e){
     e.preventDefault();
     var $wcontent = $(this).parent().parent().next('.widget-content');
-    if($wcontent.is(':visible')) 
+    if($wcontent.is(':visible'))
     {
       $(this).children('i').removeClass('icon-chevron-up');
       $(this).children('i').addClass('icon-chevron-down');
     }
-    else 
+    else
     {
       $(this).children('i').removeClass('icon-chevron-down');
       $(this).children('i').addClass('icon-chevron-up');
-    }            
+    }
     $wcontent.toggle(500);
-  }); 
+  });
 
 /* Calendar */
 
   $(document).ready(function() {
-  
+
     var date = new Date();
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-    
+
     $('#calendar').fullCalendar({
       header: {
         left: 'prev',
@@ -149,7 +177,7 @@ $('.wclose').click(function(e){
         }
       ]
     });
-    
+
   });
 
 /* Progressbar animation */
@@ -196,7 +224,7 @@ $('.wclose').click(function(e){
             orientation: "horizontal",
             range: "min",
             animate: true
-        });        
+        });
 
         $("#master5, #master6").slider({
             range: true,
@@ -209,7 +237,7 @@ $('.wclose').click(function(e){
         });
 
 
-        // Vertical slider 
+        // Vertical slider
         $( "#eq > span" ).each(function() {
             // read initial values from markup and remove that
             var value = parseInt( $( this ).text(), 10 );
@@ -243,7 +271,7 @@ $(document).ready(function(){
       if ($(this).scrollTop()>300)
       {
         $('.totop').slideDown();
-      } 
+      }
       else
       {
         $('.totop').slideUp();
@@ -269,7 +297,7 @@ $(document).ready(function(){
                 // (string | mandatory) the heading of the notification
                 title: 'Howdy! User',
                 // (string | mandatory) the text inside the notification
-                text: 'Today you got some messages and new members. Please check it out!',
+                text: 'If you need help simply use our help form on the left!',
                 // (string | optional) the image to display on the left
                 image: './img/user-big.jpg',
                 // (bool | optional) if you want it to fade out on its own or just sit there
@@ -288,9 +316,9 @@ $(document).ready(function(){
                 });
             }, 10000);
 
-  }, 4000);
+  }, 10000000);
 
-  
+
   /* On click notification. Refer ui.html file */
 
   /* Regulat notification */
@@ -471,7 +499,7 @@ $('.slide-box-head').click(function() {
       },500);
       $slidebtn.children("i").removeClass().addClass("icon-chevron-left");
     }
-}); 
+});
 
 
 $('.sclose').click(function(e){
@@ -484,17 +512,17 @@ $('.sclose').click(function(e){
   $('.sminimize').click(function(e){
     e.preventDefault();
     var $wcontent = $(this).parent().parent().next('.slide-content');
-    if($wcontent.is(':visible')) 
+    if($wcontent.is(':visible'))
     {
       $(this).children('i').removeClass('icon-chevron-down');
       $(this).children('i').addClass('icon-chevron-up');
     }
-    else 
+    else
     {
       $(this).children('i').removeClass('icon-chevron-up');
       $(this).children('i').addClass('icon-chevron-down');
-    }            
+    }
     $wcontent.toggle(0);
-  }); 
+  });
 
-  
+
